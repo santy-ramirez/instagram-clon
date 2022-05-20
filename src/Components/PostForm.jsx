@@ -36,7 +36,7 @@ render() {
          <br /><br />
          <button className='postBtnStyle'>Post</button>
       </form>
-      <Link to='/'>
+      <Link to='/instagram-clon'>
         <button className= 'galleryStyle'>
           View home
         </button>
