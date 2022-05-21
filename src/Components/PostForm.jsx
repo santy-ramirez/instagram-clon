@@ -21,7 +21,7 @@ render() {
   return (
     <div className='parentDiv'>
     <hr></hr>
-      <h1>Create a new Post</h1>
+      <h1 className='formTitulo'>Create a new Post</h1>
       <form onSubmit={this.handleSubmit} className='formStyle'>
          <input className='inputFields' required type="text" 
          placeholder="Paste your image url here"

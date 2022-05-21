@@ -218,27 +218,29 @@ border-radius:50%;
 }
 
 /*formpost*/
+.formTitulo{
+margin-block-start: 4rem;
+}
 
 .galleryStyle {
-  border: none;
+ 
   margin: 0;
-  color: #fff;
-  fontWeight: bold;
+  color: black;
   padding: 16px 20px;
-  position: absolute,
-  top: 55px,
-  right: 200px;
-  background: #7bc74d;
+  
+    border: 1px red solid;
+  
+
 }
 
 .postBtnStyle  {
   border: none;
   margin: 0;
-  color: #fff;
-  fontWeight: bold;
-  padding: 16px 20px;
-  background: #7D4C92 ;
-  width: 417px;
+  color: black;
+  padding: 16px 90px;
+  
+  border: 1px red solid;
+
 }
 
 
@@ -248,15 +250,14 @@ border-radius:50%;
   textAlign: center,
 }
  .formStyle {
-  width: 400px;
-  border: 1px solid lightgray;
-  margin: 10px auto 10px auto;
-  textAlign: center;
-  padding: 30px 40px 30px 40px;
+  max-width: 320px;
+    border: 1px solid lightgray;
+   
+    padding: 30px 40px 30px 40px;
+    margin: 0 auto
 }
  .inputFields  {
   width: inherit;
-  fontFamily: arial;
   padding: 6px;
 }
 @media (max-width: 800px){
