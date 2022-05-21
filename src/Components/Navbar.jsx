@@ -19,7 +19,7 @@ return(
             <li><i className="far fa-circle"></i></li>
         </ul>
     </nav>
-    <hr></hr>
+  
 
     </>
 )
