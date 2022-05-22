@@ -1,48 +1,55 @@
-import React, {useState, Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState, useRef } from 'react';
+//import { Link } from 'react-router-dom';
 import './style.css';
 
 
   
-class PostForm extends Component {
-  handleSubmit = (e) => {
+const PostForm = ()=> {
+
+let getDescripcion = useRef('');
+let getImage = useRef('');
+
+
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const descripcion = this.getDescripcion.value;
-    const image = this.getImage.value;
-    localStorage.setItem('descripcio', descripcion);
+    const descripcion = getDescripcion.current.value;
+    const image = getImage.current.value;
+    localStorage.setItem('descripcion', descripcion);
     localStorage.setItem('image', image);
-    this.getDescripcion.value = '';
-    this.getImage.value = '';
+    getDescripcion.current.value = '';
+    getImage.current.value = '';
   }
 
 
   
-render() {
+
   return (
-    <div className='parentDiv'>
+
+    <div className='parentdiv'>
     <hr></hr>
       <h1 className='formTitulo'>Create a new Post</h1>
-      <form onSubmit={this.handleSubmit} className='formStyle'>
-         <input className='inputFields' required type="text" 
+      <form onSubmit={handleSubmit} className='form'>
+         <input className='inputfields' required type="text" 
          placeholder="Paste your image url here"
-         ref={(input) => this.getImage = input}
+         ref={ getImage } 
          /><br></br>
          <br></br>
-         <textarea className='inputFields' 
+         <textarea className='inputfields' 
            required rows="5" cols="28" 
   
          placeholder="Enter DESCRIPCION" 
-           ref={(input)=>this.getDescripcion = input}/>
+           ref={getDescripcion }/>
          <br /><br />
-         <button className='postBtnStyle'>Post</button>
+         <button className='postbtn'>Post</button>
       </form>
-      <Link to='/instagram-clon'>
-        <button className= 'galleryStyle'>
+      <a href="/instagram-clon/">
+        <button className= 'gallery'>
           View home
         </button>
-      </Link>
+      </a>
     </div>
    );
 }
-}
+
 export default PostForm;

@@ -54,7 +54,7 @@ const hola = () =>{
                     </div>
                     <div>
                         <h4 >descripcion</h4>
-                        <p >{localStorage.getItem('message')}</p>
+                        <p >{localStorage.getItem('descripcion')}</p>
                     </div>
                     <div>
                         <h4 >santy_dev</h4>
