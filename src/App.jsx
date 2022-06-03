@@ -18,8 +18,8 @@ return (
 
    <BrowserRouter>
     <Routes>    
-      <Route path="/instagram-clon/" element={<AppConteiner/>} />
-      <Route path="/instagram-clon/post" element={<PostForm/>} />
+      <Route path="/" element={<AppConteiner/>} />
+      <Route path="/post" element={<PostForm/>} />
       
     </Routes>
   </BrowserRouter>

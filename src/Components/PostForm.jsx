@@ -43,7 +43,7 @@ let getImage = useRef('');
          <br /><br />
          <button className='postbtn'>Post</button>
       </form>
-      <a href="/instagram-clon/">
+      <a href="/">
         <button className= 'gallery'>
           View home
         </button>
