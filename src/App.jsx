@@ -1,6 +1,6 @@
 
 import './App.css';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppConteiner from './Components/AppConteiner.jsx'
 import PostForm from './Components/PostForm.jsx'
 
@@ -16,13 +16,14 @@ return (
 
     <div className="App">
 
-<HashRouter>
+<BrowserRouter windowr>
     <Routes>    
-      <Route path="/" element={<AppConteiner/>} />
+      <Route path="/" element={<AppConteiner/>}/>
       <Route path="/post" element={<PostForm/>} />
-      
-    </Routes>
-    </HashRouter>
+     
+      </Routes>
+    </BrowserRouter>
+    
 
     </div>
     );

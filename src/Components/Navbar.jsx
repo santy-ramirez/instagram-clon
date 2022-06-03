@@ -1,5 +1,6 @@
 import './style.css';
 import navLogo from'../images/instalogo.png';
+import { Link } from "react-router-dom";
 const Navbar = ()=>{
 return(
     <>
@@ -12,7 +13,7 @@ return(
         <input type="search" placeholder="search"></input>
         </ul>
         <ul className="rightNav">
-           <a href="./post"> <li><i className="fas fa-home"></i></li></a>
+           <Link to="post"> <li><i className="fas fa-home"></i></li></Link>
             <li><i className="fas fa-location-arrow"></i></li>
             <li><i className="far fa-compass"></i></li>
             <li><i className="far fa-heart"></i></li>
