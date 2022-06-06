@@ -1,16 +1,20 @@
 import './style.css'
-import image from "../images/avatar.jpg";
 
-const SideBoxImage = () => {
+
+const SideBoxImage = ({data}) => {
+    
     return (
         <>
-            <div className="SideBoxImageContainer">
-                    <img src={image} className="sideBox_image" alt=""></img>
-                    <div>
-                        <h4>Santy Dev</h4>
-                        <p>SANTY_DES</p>
-                    </div>
+        {data.map(dat => (
+            <div  key={dat.id.value} className="SideBoxImageContainer">
+            <img src={dat.picture.medium   } className="sideBox_image" alt=""></img>
+            <div>
+                <h4>{dat.name.first   }</h4>
+                <p>@{dat.login.username  }</p>
             </div>
+    </div>
+        ) )}
+            
         </>
     )
 }
