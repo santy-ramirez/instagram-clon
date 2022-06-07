@@ -3,16 +3,8 @@ import { useEffect, useState } from 'react';
 import image from "../images/avatar.jpg";
 import SideBoxImage from "./SideBoxImage"
 
-const SideBox = ()=>{
-    const [dataUser, getdataUser] = useState([]);
+const SideBox = ( {data} )=>{
     
-    useEffect(() => {
-
-        fetch("https://randomuser.me/api/?results=5")
-        .then((response) => response.json())
-        .then((data) => getdataUser(data.results));
-    
-    },[]);
     return(
         <>
         <div className="sideBox">
@@ -25,7 +17,7 @@ const SideBox = ()=>{
             </div>
             <h3>Suggestions For You</h3>
            
-         <SideBoxImage data= {dataUser}/>
+         <SideBoxImage data={data}/>
         </div>
         </>
     )

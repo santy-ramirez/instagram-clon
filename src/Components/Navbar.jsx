@@ -13,11 +13,11 @@ return(
         <input type="search" placeholder="search"></input>
         </ul>
         <ul className="rightNav">
-           <Link to="post"> <li><i className="fas fa-home"></i></li></Link>
-            <li><i className="fas fa-location-arrow"></i></li>
+           <Link to="/"> <li><i className="fas fa-home"></i></li></Link>
+           <Link to="/post"><li><i className="far fa-circle"></i></li></Link>
             <li><i className="far fa-compass"></i></li>
             <li><i className="far fa-heart"></i></li>
-            <li><i className="far fa-circle"></i></li>
+            <Link to="/perfil"><li><i className=" far fa-circle"></i></li></Link>
         </ul>
     </nav>
   

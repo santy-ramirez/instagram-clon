@@ -1,25 +1,13 @@
-import React, {useState, useRef } from 'react';
+
 //import { Link } from 'react-router-dom';
 import './style.css';
+import { Link } from "react-router-dom";
+import Navbar from './Navbar.jsx';
 
-
+  //probemo probemos probemo por js dhf fjg gk vfmvckdmddl kkkkkkkkkkkkkkkkkkkkkkkkkkl lllllllllllllllllllllllllllllllll
+const PostForm = ({change1, change2, name,name1, add})=> {
+ 
   
-const PostForm = ()=> {
-
-let getDescripcion = useRef('');
-let getImage = useRef('');
-
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const descripcion = getDescripcion.current.value;
-    const image = getImage.current.value;
-    localStorage.setItem('descripcion', descripcion);
-    localStorage.setItem('image', image);
-    getDescripcion.current.value = '';
-    getImage.current.value = '';
-  }
 
 
   
@@ -27,27 +15,32 @@ let getImage = useRef('');
   return (
 
     <div className='parentdiv'>
-    <hr></hr>
+      <Navbar/>
+    
       <h1 className='formTitulo'>Create a new Post</h1>
-      <form onSubmit={handleSubmit} className='form'>
+     
+      <form onSubmit={add} className='form'>
          <input className='inputfields' required type="text" 
          placeholder="Paste your image url here"
-         ref={ getImage } 
-         /><br></br>
-         <br></br>
-         <textarea className='inputfields' 
-           required rows="5" cols="28" 
-  
-         placeholder="Enter DESCRIPCION" 
-           ref={getDescripcion }/>
+        onChange={change1}
+        value={name}
+              />
+ <br /><br />
+<input className='inputfields' required type="text" 
+         placeholder=" descripcion"
+        onChange={change2}
+        value={name1}
+              />
+
+         
          <br /><br />
          <button className='postbtn'>Post</button>
       </form>
-      <a href="/">
+      <Link to="/">
         <button className= 'gallery'>
           View home
-        </button>
-      </a>
+        </button></Link>
+      
     </div>
    );
 }

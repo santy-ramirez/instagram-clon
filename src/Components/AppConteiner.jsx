@@ -10,20 +10,20 @@ import  {useState} from 'react'
 import Story from './Story.jsx';
 import SideBox from './SideBox.jsx';
 
-const AppConteiner = () => {
+const AppConteiner = ({name12, data}) => {
 
   const [hola,sethola] = useState(0)
    
     return (
     <div>
     	<Navbar/>
-        <div className="main_container">
+        <div id='con' className="main_container">
         <div className="page_content">
         <div className="main_content">
          <Story sk={hola}/>
-         <Post/>
+         <Post name={name12}  />
         </div>
-        <SideBox/>
+        <SideBox data={data} />
         </div>
         </div>
     </div>
