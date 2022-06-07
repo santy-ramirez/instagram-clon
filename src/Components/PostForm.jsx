@@ -27,7 +27,7 @@ const PostForm = ({change1, change2, name,name1, add})=> {
               />
  <br /><br />
 <input className='inputfields' required type="text" 
-         placeholder=" descripcion"
+         placeholder=" Descripcion"
         onChange={change2}
         value={name1}
               />

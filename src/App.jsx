@@ -1,15 +1,9 @@
-
-import './App.css';
-
 import React, {useState,useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
 import AppConteiner from './Components/AppConteiner.jsx'
 import PostForm from './Components/PostForm.jsx'
-
 import PerfilComponent from './Components/PerfilComponent';
-
-
-
 
 
 
@@ -38,10 +32,7 @@ const App = () => {
   const [name1, setName1] = useState('');
   const [dataUser, getdataUser] = useState([]);
 
-
-
-  
-    
+ 
   useEffect(() => {
 
       fetch("https://randomuser.me/api/?results=6")
@@ -53,24 +44,18 @@ const App = () => {
 
 
   function handleChange(event) {
-    // track input field's state
-    setName(event.target.value);
-    
-
    
-
-    
+    setName(event.target.value); 
   }
 
- function handleChange2(event) {
-    // track input field's state
+
+ function handleChange1(event) {
+   
     setName1(event.target.value);
     
-
-   
-
-    
   }
+
+
   function handleAdd(event) {
     event.preventDefault();
     const newList = list.concat({  id:name, name :name1 });
@@ -80,33 +65,34 @@ const App = () => {
     setName1('');
 
   }
+
 return (
 
     <div className="App">
 
-<BrowserRouter windowr>
-    <Routes>    
-      <Route path="/"
-       element={<AppConteiner
-       name12={list}
-       data ={dataUser}
-       />} />
-      <Route path="/post" 
-      element={<PostForm 
-      change1= {handleChange}
-      change2= {handleChange2}
-      name = {name}
-      name1 ={name1} 
-      add ={handleAdd}
-      
-      
-      />} />
-      <Route path="/perfil"
-      element={<PerfilComponent/>} />
-      </Routes>
+      <BrowserRouter windowr>
+         <Routes>    
+            <Route path="/"
+              element={<AppConteiner
+              dato={list}
+              data ={dataUser}
+              />} />
+
+            <Route path="/post" 
+              element={<PostForm 
+              change1= {handleChange}
+              change2= {handleChange1}
+              name = {name}
+              name1 ={name1} 
+              add ={handleAdd}
+              />} />
+
+            <Route path="/perfil"
+              element={<PerfilComponent data={list}  />} />
+            </Routes>
+
     </BrowserRouter>
     
-
     </div>
     );
     };

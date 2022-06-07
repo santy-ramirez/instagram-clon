@@ -1,6 +1,7 @@
 import "./style.css";
 import post_img from "../images/avatar.jpg"
 import {useState} from 'react';
+import { Link } from "react-router-dom";
 
 
 
@@ -9,8 +10,8 @@ const corarojo ={
    
 } 
 
-const Post = ({name}) => {
- console.log(name.map(p => console.log(p)))
+const Post = ({dato}) => {
+
 const [ todos , setTodos ] = useState([]);
 const [color , setColor] = useState(corarojo)
 
@@ -35,23 +36,23 @@ const hola = () =>{
 } 
     return (
         <>
-      {name.map(p => (
+      {dato.map(p => (
 
 
 <div className="post_container">
 <div className="heading_part">
-    <img src={post_img} alt="profile_pic" className="profile_pic"></img>
-    <p className="name">santy_dev</p>
+<Link to="/perfil">  <img src={post_img} alt="profile_pic" className="profile_pic"></img></Link>
+  <p className="name">santy_dev</p>
 </div>
 <div className="image_part">
-    <img src={p.id} alt="post_pic" className="post_pic"></img>
+<img src={p.id} alt="post_pic" className="post_pic"></img>
 </div>
 <div className="bottom_part">
     <div>
         <li onClick={hola}><i style={color} className="far fa-heart"></i></li>
         <li><i className="fas fa-location-arrow"></i></li>
         <li><i className="far fa-comment"></i></li>
-        <li><i className="fas fa-ellipsis-h"></i></li>
+        <li className="fa-circulo"><i className="fas fa-ellipsis-h"></i></li>
     </div>
     <div>
         <img src={p.id}  alt="liked_by_pic" className="liked_by_pic"></img>
@@ -69,15 +70,17 @@ const hola = () =>{
     </div>
 </div>
 <div className="comment_part">
-<form onSubmit={headleSubmit}>
-    <input id="new-todo" type="text" name="text"/>
-     <button>
-    coment
-    </button>
+
+<form  className="coment__form" onSubmit={headleSubmit}>
+    <input className="input__coment" id="new-todo" placeholder="  Ingresa tu comentario" type="text" name="text"/> <button className="button__coment" >coment</button>
     </form>
 
-   
-    {todos.map(item =>  <p>{item} </p> ) }
+    {todos.map(item =>  (
+    <div className="coment__conteiner">
+        <img className="image__coment" src={post_img} alt="" />
+    <p>{item} </p>
+    </div>
+    ) ) }
    
 </div>
 </div>
