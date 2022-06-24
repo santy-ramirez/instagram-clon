@@ -7,21 +7,21 @@ import SideBox from './SideBox.jsx';
 
 const AppConteiner = ({dato, data}) => {
 
-  const [hola,sethola] = useState(0)
-   
-    return (
-    <div>
-    	<Navbar/>
-        <div id='con' className="main_container">
-        <div className="page_content">
-        <div className="main_content">
-         <Story sk={hola}/>
-         <Post dato={dato}  />
-        </div>
-        <SideBox data={data} />
-        </div>
-        </div>
+const [hola,sethola] = useState(0)
+
+return (
+<div>
+  <Navbar />
+  <div id='con' className="main_container">
+    <div className="page_content">
+      <div className="main_content">
+        <Story sk={hola} />
+        <Post dato={dato} />
+      </div>
+      <SideBox data={data} />
     </div>
+  </div>
+</div>
 
 )}
 

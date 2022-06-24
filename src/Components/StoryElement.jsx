@@ -1,15 +1,15 @@
 import './style.css';
 const StoryElement= ()=>{
-    return(
-        <>
-        <div className="storyCircleContainer">
+return(
+<>
+    <div className="storyCircleContainer">
         <div className="storyCircle">
         </div>
         <p>Name</p>
-        </div>
-       
-        </>
-    )
+    </div>
+
+</>
+)
 }
 
 export default StoryElement;

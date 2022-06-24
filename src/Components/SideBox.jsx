@@ -5,23 +5,23 @@ import SideBoxImage from "./SideBoxImage"
 import { Link } from "react-router-dom";
 
 const SideBox = ( {data} )=>{
-    
-    return(
-        <>
-        <div className="sideBox">
+
+return(
+<>
+    <div className="sideBox">
+        <div>
+            <Link to="/perfil"> <img src={image} className="sideBox_main_image" alt=""></img></Link>
             <div>
-            <Link to="/perfil"> <img src={image}  className="sideBox_main_image" alt=""></img></Link>
-         <div>
-         <h3>santiago_Ramirez</h3>
-         <p>@santy_dev</p>
-         </div>
+                <h3>santiago_Ramirez</h3>
+                <p>@santy_dev</p>
             </div>
-            <h3>Suggestions For You</h3>
-           
-         <SideBoxImage data={data}/>
         </div>
-        </>
-    )
+        <h3>Suggestions For You</h3>
+
+        <SideBoxImage data={data} />
+    </div>
+</>
+)
 }
 
 export default SideBox

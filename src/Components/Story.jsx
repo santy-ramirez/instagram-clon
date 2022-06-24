@@ -1,21 +1,21 @@
 import StoryElement from './StoryElement.jsx';
 import './style.css';
 const Story = ({sk})=>{
-    console.log(sk)
+console.log(sk)
 
-    return(
+return(
 <>
-<div className="storyBox">
-<StoryElement/>
-<StoryElement/>
-<StoryElement/>
-<StoryElement/>
-<StoryElement/>
-<StoryElement/>
-<StoryElement/>
-</div>
+    <div className="storyBox">
+        <StoryElement />
+        <StoryElement />
+        <StoryElement />
+        <StoryElement />
+        <StoryElement />
+        <StoryElement />
+        <StoryElement />
+    </div>
 </>
-    )
+)
 }
 
 export default Story;
