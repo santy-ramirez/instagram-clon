@@ -6,14 +6,14 @@ const Navbar = () => {
     return (
         <>
             <nav>
-                <ul className="leftNav">
-                    <Link to="/"> <img src={navLogo} alt="insta nav logo" className="logo"></img></Link>
+                <ul className="left_nav">
+                    <Link to="/"> <img src={navLogo} alt="insta_nav_logo" className="logo"></img></Link>
                 </ul>
-                <ul className="midNav">
+                <ul className="mid_nav">
                     <i className="fas fa-search"></i>
                     <input type="search" placeholder="search"></input>
                 </ul>
-                <ul className="rightNav">
+                <ul className="right_nav">
                     <Link to="/">
                         <li><i className="fas fa-home"></i></li>
                     </Link>

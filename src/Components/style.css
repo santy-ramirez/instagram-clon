@@ -43,7 +43,7 @@ li {
     left: 30%;
 }
 
-.midNav input {
+.mid_nav input {
     font-size: 15px;
     text-transform: capitalize;
     text-align: center;
@@ -54,11 +54,11 @@ li {
     border-radius: 3px;
 }
 
-.rightNav {
+.right_nav {
     display: flex;
 }
 
-.rightNav li {
+.right_nav li {
     font-size: 25px;
     margin-left: 10px;
     margin-right: 10px;
@@ -78,7 +78,7 @@ li {
     background-color: white;
     border: 1px solid rgb(245, 238, 238);
     border-radius: 5px;
-    width: 100%;
+   
 
     overflow-x: overlay;
 
@@ -106,7 +106,7 @@ li {
 
 /***post***/
 .post_container {
-    width: 100%;
+   
     background-color: white;
     margin-top: 20px;
     border: 1px solid rgb(245, 238, 238);
@@ -269,8 +269,8 @@ li {
 
 .parentdiv {
     align: center,
-        margin: 0px auto auto auto,
-        textAlign: center,
+    margin: 0px auto auto auto,
+    textAlign: center,
 }
 
 .form {
@@ -293,7 +293,7 @@ li {
 }
 
 @media (max-width: 600px) {
-    .midNav {
+    .mid_nav {
         display: none;
     }
 
@@ -366,6 +366,6 @@ li {
 
 .imagen {
     max-width: 200px;
-    
+
     margin: .1rem;
 }
