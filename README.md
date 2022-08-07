@@ -1,10 +1,10 @@
-# instagram-clon
+k# instagram-clon
 
 ![captura](./captura.png)
 
 ## Deploy
 
-[deploy del proyecto](https://instagram-clon-4mtjv140i-santy-ramirez.vercel.app/perfil)
+[deploy del proyecto](https://instagram-clon-4mtjv140i-santy-ramirez.vercel.app)
 
 ----
 ## Para correr el proyecto en local Abrir una terminal y correr los siguientes comandos:
