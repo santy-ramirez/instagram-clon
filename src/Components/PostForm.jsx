@@ -4,45 +4,45 @@ import './style.css';
 import { Link } from "react-router-dom";
 import Navbar from './Navbar.jsx';
 
-  //probemo probemos probemo por js dhf fjg gk vfmvckdmddl kkkkkkkkkkkkkkkkkkkkkkkkkkl lllllllllllllllllllllllllllllllll
-const PostForm = ({change1, change2, name,name1, add})=> {
- 
-  
+
+const PostForm = ({ change1, change2, name, name1, add }) => {
 
 
-  
+
+
+
 
   return (
 
     <div className='parentdiv'>
-      <Navbar/>
-    
-      <h1 className='formTitulo'>Create a new Post</h1>
-     
-      <form onSubmit={add} className='form'>
-         <input className='inputfields' required type="text" 
-         placeholder="Paste your image url here"
-        onChange={change1}
-        value={name}
-              />
- <br /><br />
-<input className='inputfields' required type="text" 
-         placeholder=" Descripcion"
-        onChange={change2}
-        value={name1}
-              />
+      <Navbar />
 
-         
-         <br /><br />
-         <button className='postbtn'>Post</button>
+      <h1 className='formTitulo'>Create a new Post</h1>
+
+      <form onSubmit={add} className='form'>
+        <input className='inputfields' required type="text"
+          placeholder="Paste your image url here"
+          onChange={change1}
+          value={name}
+        />
+        <br /><br />
+        <input className='inputfields' required type="text"
+          placeholder=" Description"
+          onChange={change2}
+          value={name1}
+        />
+
+
+        <br /><br />
+        <button className='postbtn'>Post</button>
       </form>
       <Link to="/">
-        <button className= 'gallery'>
+        <button className='gallery'>
           View home
         </button></Link>
-      
+
     </div>
-   );
+  );
 }
 
 export default PostForm;
