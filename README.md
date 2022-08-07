@@ -1,4 +1,4 @@
-k# instagram-clon
+# instagram-clon
 
 ![captura](./captura.png)
 
